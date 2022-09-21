@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1> Edit Item</h1>
+    
+    <form action="/product/<%= Product._id %>?_method=PUT" method="POST">
+        <label> Product:
+            <input type="text" value="<%= Product.name %>" name="name">
+        </label>
+        <br>
+        <label>Description:
+            <input type="text" value="<%= Product.description %>" name="description">
+        </label>
+        <br>
+        <label>Image:
+            <input type="text" value="<%= Product.img %>" name="img">
+        </label>
+        <br>
+        <label>Price:
+            <input type="number" value="<%= Product.price %>"  name="price">
+        </label>
+        <br>
+        <label>Quantity:
+        <input type="number" value="<%= Product.qty%>"  name="qty">
+        </label>
+        <br>
+        <input type="submit" value="Edit Product">
+    </form>
+    <a href="/product"><button>Home</button></a>
+</body>
+</html>

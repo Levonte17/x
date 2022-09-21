@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Welcome To The Mongoose Store</h1>
+    <ul class="container" style="display:flex ; font-size:large ">
+        <% product.forEach(p => { %>
+            <li>
+                <h3><%= p.name %></h3>    
+                <br> 
+                <img src=<%= p.img %> alt="" width="80%" height="80%">
+                <br>
+                <a href="/product/<%= p._id %>">
+                        <p><%= p.name %> Info</p>
+                </a>
+                <% }); %>
+            </li>
+    </ul>
+    <br><br>
+    <br><br>
+    <a href="/product/new"> Add New Product</a>
+</body>
+</html>

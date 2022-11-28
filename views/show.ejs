@@ -19,16 +19,40 @@
         <p>Sorry, Out of Stock</p>
         <% } %>
 
+
+
+
+        
     <form action="/product/<%= Product._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete Product">
     </form>
+
+<style>
+    p{
+        text-decoration: none;
+        color: black;
+        font-size: 3rem;
+    }
+</style>
+
     <a href="/product"> <button>Back To Shopping</button> </a>
     <br>
 
     
     
-    <a href="/product/<%= Product._id %>/edit"><button>Edit Item</button></a>
+    <a href="/product/<%= Product._id %>/edit">
+        <button>
+            Edit Item
+        </button>
+    </a>
+
     <br>
 
 </body>
 </html>
+
+<style>
+    *{
+        text-decoration: none;
+    }
+</style>

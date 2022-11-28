@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// a model is a singular representation of our data
+//REVIEWS
+const reviewSchema = new Schema({
 
-// step one create the schema
+    body: {type: String},
+    rating: {type: Number, min: 1, max: 5, default: 5}
+    }, {timestamps: true}); //approximatly...
+
 const productSchema = new mongoose.Schema({ // Schema is a constructor
     name: {type: String},
     description: {type: String},

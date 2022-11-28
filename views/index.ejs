@@ -6,21 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
 </head>
-<body>
-    <h1>Welcome To The Mongoose Store</h1>
-    <ul class="container" style="display:flex ; font-size:large ">
+<body
+    style="text-align: center;
+        padding-top: 0;
+        margin-top: 0;
+    ">
+
+    <div class="header" 
+        style="text-decoration: none;
+            font-size: 2rem;
+            text-shadow: 2px 2px 2px red;
+            padding-top: 0;
+            color: white;
+            margin-top: 0;
+    ">
+        <header>
+        <a href="/"
+            style="text-decoration: none;
+                font-size: 2rem;
+                color: red;
+                text-shadow: 3px 3px 3px red;
+        ">
+            HOME 
+        </a>
+&nbsp;&nbsp;&nbsp;
+        <a href="/jerseys"
+            style="text-decoration: none;
+                font-size: 2rem;
+                color: red;
+                text-shadow: 3px 3px 3px white;
+        ">
+            JERSEYS 
+        </a>
+&nbsp;&nbsp;&nbsp;
+
+        <a href="/accesories"
+            style="text-decoration: none;
+                font-size: 2rem;
+                color: red;
+                text-shadow: 3px 3px 3px white;
+                ">
+             ACCESORIES 
+        </a>
+&nbsp;&nbsp;&nbsp;
+        <a href="/jumpsuits"
+            style="text-decoration: none;
+                font-size: 2rem;
+                color: red;
+                text-shadow: 3px 3px 3px white;
+        ">
+            JUMPSUITS
+        </a>
+        </header>
+    </div>
+
+<style>
+.header a{
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px red;
+
+}
+</style>
+
+<div class="welcome"
+    style="width: 100%;">
+    <h1>
+        Welcome To Humble Me Apparel
+    </h1>
+
+
+</div>
+<style>
+    p, li{
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+    }
+    .welcome{
+        background-image: 
+            url('https://i.imgur.com/LHsq4hh.jpg');
+        background-position: center;
+        background-size: cover; 
+        }
+    h1{
+        font-size: 4rem;
+        padding-top: 22%;
+        padding-bottom: 25%;
+        color:white;
+        text-shadow: 2px 2px 2px red;
+    }
+    h2{
+        font-size: 3rem;
+        font-weight: 100;
+        color:white;
+        text-shadow: 2px 2px 2px red;
+
+    }
+    h5{
+        font-size: 2rem;
+        padding-bottom: 15%;
+    }
+
+</style>
+<div class="column">
+    <ul class="container" 
+    style="
+    margin: auto;
+    font-size:large; 
+    display: flex; width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+">
         <% product.forEach(p => { %>
-            <li>
-                <h3><%= p.name %></h3>    
+            <li style="display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                margin: 15px"
+            >
                 <br> 
-                <img src=<%= p.img %> alt="" width="80%" height="80%">
+                <img src=<%= p.img %> 
+                    alt="" width="350" height="350"
+                    style="border-radius: 25%;
+                ">
                 <br>
                 <a href="/product/<%= p._id %>">
-                        <p><%= p.name %> Info</p>
+                        <p><%= p.name %></p>
                 </a>
                 <% }); %>
             </li>
     </ul>
+</div>
     <br><br>
     <br><br>
     <a href="/product/new"> Add New Product</a>
